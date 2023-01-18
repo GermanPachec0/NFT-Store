@@ -1,3 +1,4 @@
+import { CartWidget } from '../CartWidget';
 import './style.css';
 
 export const Navbar = () => {
@@ -21,7 +22,7 @@ export const Navbar = () => {
                             </span> <p>Tienda</p></button>
                         </li>
                         <li class="nav-item">
-                            <button className='btn btn-dark' href="#"><span class="material-symbols-outlined">shopping_bag</span> <p>Mis Compras</p></button>
+                            <CartWidget></CartWidget>
                         </li>
                     </ul>
                     <ul className="nav navbar-nav justify-content-end">
