@@ -1,3 +1,11 @@
 .nav-item{
     color: white;
 }
+
+.img-link{
+    margin-left: 20px;
+    width: 150px;
+    height: 100px;
+    border-radius:150px;
+    border-color: blueviolet;
+}
