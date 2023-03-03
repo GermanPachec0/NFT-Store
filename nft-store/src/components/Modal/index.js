@@ -79,9 +79,9 @@ export const ModalForm = () => {
             </Typography>
             <form className='formularioCompra' onSubmit={handleSubmit}>
                 <div>
-                    <TextField margin="normal"  fullWidth  label="Email" id="margin-normal" required ={true} type= "email" name='email' value={inputs.email} onChange={handleChange}/>
-                    <TextField margin="normal"  fullWidth label="Nombre"  required ={true} type= "text" name='name' value={inputs.nombre} onChange={handleChange}/>
-                    <TextField margin="normal"  fullWidth label="Telefono"  required ={true} type= "text" name='phone' value={inputs.telefono} onChange={handleChange}/>
+                    <TextField margin="normal"  fullWidth  label="Email" id="margin-normal" required ={true} type= "email" name='email' value={inputs.email || ''} onChange={handleChange}/>
+                    <TextField margin="normal"  fullWidth label="Nombre"  required ={true} type= "text" name='name' value={inputs.nombre || ''} onChange={handleChange}/>
+                    <TextField margin="normal"  fullWidth label="Telefono"  required ={true} type= "text" name='phone' value={inputs.telefono || ''} onChange={handleChange}/>
                 </div>
                 <Button variant="contained"  type='submit'>Comprar</Button>
                 <Button variant="outlined" color="error" className='btnCancelarCompra' onClick={()=>{setOpen(false)}}>Cancelar</Button>

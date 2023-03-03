@@ -10,7 +10,7 @@ export const Item = ({items}) => {
       items.map((item) => {
         return <>
         <Link to={`/item/${item.id}`} style={{display:'inline-block',  margin:'35px'}} className='link'>
-          <CardItem item={item} width = {400} height = {350}>
+          <CardItem key={item.id} item={item} width = {400} height = {350}>
           </CardItem>
       </Link>
       </>
