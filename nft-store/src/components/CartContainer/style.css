@@ -1,0 +1,26 @@
+
+
+.cartContainer{
+    display: inline-block;
+}
+
+.divLeft{
+    width:245px;
+    float: left;
+    margin: 4%;
+   
+}
+
+.wrapper{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.divRight{
+    
+    float: right;
+    margin: 5%;
+    padding-right: 3%;
+}

@@ -5,20 +5,27 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/lab": "^5.0.0-alpha.120",
     "@mui/material": "^5.11.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "env-cmd": "^10.1.0",
+    "firebase": "^9.17.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
+    "sweetalert2": "^11.7.1",
+    "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f C:/Users/Germán/Desktop/NFT-Store/nft-store/src/.env.prod react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

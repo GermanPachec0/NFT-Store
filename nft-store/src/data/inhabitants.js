@@ -8,7 +8,7 @@ export const inhabitants  = [
             id: 1,
             name: "punk-collection"
         },
-       last_price:"2 ETH"
+       last_price:2
       },
       {
         id: 1,
@@ -20,7 +20,7 @@ export const inhabitants  = [
           id: 1,
           name: "punk-collection"
       },
-      last_price:"1 ETH"
+      last_price:1
         
       },
       {
@@ -33,7 +33,7 @@ export const inhabitants  = [
           id: 2,
           name: "ape-collection"
       },
-      last_price:"3 ETH"
+      last_price:3
       },
       {
         id: 4,
@@ -44,7 +44,7 @@ export const inhabitants  = [
           id: 2,
           name: "ape-collection"
       },
-      last_price:"2.5 ETH"
+      last_price:2.5
       },
       {
         id: 5,
@@ -56,7 +56,7 @@ export const inhabitants  = [
           id: 2,
           name: "ape-collection"
       },
-        last_price:"1.5 ETH"
+        last_price:1.5
       },
       {
         id: 6,
@@ -68,6 +68,6 @@ export const inhabitants  = [
           id: 3,
           name: "cat-collection"
       },
-      last_price:"1.5 ETH"
+      last_price:1.5
       }
     ]

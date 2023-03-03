@@ -12,3 +12,5 @@ export {Home} from './Home';
 export {CartContainer} from './CartContainer'
 export {DropDownList} from './DropDownButton'
 export {CardItem} from './Card'
+export {CarItemDetail} from './CartItemDetail'
+export {ModalForm} from './Modal'

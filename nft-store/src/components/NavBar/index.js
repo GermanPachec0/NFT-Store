@@ -1,17 +1,22 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ItemContext } from '../../providers';
 import { CartWidget } from '../CartWidget';
 import { DropDownList } from '../DropDownButton';
 
 import './style.css';
 
 export const Navbar = () => {
+
+    const {cantItems} = useContext(ItemContext);
+   
     return (
         <>
             <nav className="navbar navbar-inverse bg-dark">
                 <div className="container-fluid">
                     <div className="navbar-header">
                         <NavLink to={'/'}>
-                        <img className='img-link' src='https://img.freepik.com/vector-gratis/concepto-token-no-fungible-nft-efecto-luz-neon_1017-36944.jpg?w=826&t=st=1675395709~exp=1675396309~hmac=f63f8eaa1086c16fa16220a2ef76c17949c9da7e86d6a1c106be5746cca0216c'/>
+                        <img className='img-link' src='https://ih1.redbubble.net/image.3138133548.5112/st,small,507x507-pad,600x600,f8f8f8.jpg'/>
                         </NavLink>
                     </div>
                     <ul className="nav justify-content-center gap-5">
@@ -26,9 +31,9 @@ export const Navbar = () => {
                         
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/cart'}>
-                                <CartWidget/>
-                            </NavLink>
+                            
+                               {cantItems == 0 ? '': <NavLink to={'/cart'}><CartWidget items = {cantItems}/> </NavLink>}
+                           
                         </li>
                     </ul>
                     <ul className="nav navbar-nav justify-content-end">

@@ -6,10 +6,11 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import './Card.css';
 
-export const CardItem = ({item,width,height}) => {
+export const CardItem = ({item,width,height,children}) => {
+  
   return (
     <div>
-     <Card sx={{ maxWidth: {width}}}  className="card" >
+     <Card sx={{ maxWidth: {width}}}  className="cardContainer" >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -22,10 +23,17 @@ export const CardItem = ({item,width,height}) => {
               {item.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Price: {item.last_price}
+              Price: {item.last_price} ETH
             </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Stock: {item.stock}
+            </Typography>
+            {item.quantity == undefined ? '' :   <Typography variant="body2" color="text.secondary">
+              quantity: {item.quantity} 
+            </Typography>}
           </CardContent>
         </CardActionArea>
+        {children}
       </Card>
     </div>
   )

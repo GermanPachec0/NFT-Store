@@ -1,0 +1,6 @@
+.loadingButton{
+    margin-top: 50%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }

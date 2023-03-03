@@ -1,0 +1,17 @@
+.detailCart{
+    background-color: beige;
+    border-color:darkslategrey;
+    width: 120%;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    border-style: inset;
+    height: 350px;
+    text-align: center;
+
+}
+
+.terminaCompra{
+   
+    margin-top: 20px;
+}
