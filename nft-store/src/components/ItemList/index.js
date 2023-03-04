@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { itemService } from '../../services/items';
 import { Item } from '../Item';
-import LoadingButton from '@mui/lab/LoadingButton';
+import LinearProgress from '@mui/material/LinearProgress';
 import './styles.css'
 
 export const ItemList = ({idCategoria}) => {
@@ -28,7 +28,7 @@ export const ItemList = ({idCategoria}) => {
 
 
   return (
-    <> {loading && <LoadingButton className='loadingButton' loading loadingIndicator="Loading…" variant="outlined"><h1>Fetching Data...</h1></LoadingButton>}
+    <> {loading &&  <LinearProgress />}
         <div className="p-2"><Item items={items} /></div>
     </>
       

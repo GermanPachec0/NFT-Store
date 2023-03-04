@@ -1,8 +1,17 @@
 .drop-list{
+    display: flex;
     text-decoration:none;
+    align-items: center;
+    text-align: center;
 }
 
 .link{
     text-decoration:none;
     color: black;
+}
+
+.circular{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

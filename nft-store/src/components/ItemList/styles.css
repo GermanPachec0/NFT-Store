@@ -4,3 +4,10 @@
     display: grid;
     place-content: center;
   }
+
+  .circularProgressCenter{
+    margin-top: 50%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }

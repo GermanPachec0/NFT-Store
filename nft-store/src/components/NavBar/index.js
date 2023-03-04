@@ -1,13 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ItemContext } from '../../providers';
+import { categoryService } from '../../services/category';
+import { itemService } from '../../services/items';
 import { CartWidget } from '../CartWidget';
 import { DropDownList } from '../DropDownButton';
 
 import './style.css';
 
 export const Navbar = () => {
+    const [categories,setCategories] = useState([]);
 
+    useEffect(()=>{
+        categoryService.getAll().then(data =>setCategories(data));
+    },[])
     const {cantItems} = useContext(ItemContext);
    
     return (
@@ -27,13 +33,10 @@ export const Navbar = () => {
                             
                         </li>
                         <li className="nav-item">
-                                <DropDownList></DropDownList>
-                        
+                            <DropDownList categories={categories}></DropDownList>
                         </li>
                         <li className="nav-item">
-                            
                                {cantItems == 0 ? '': <NavLink to={'/cart'}><CartWidget items = {cantItems}/> </NavLink>}
-                           
                         </li>
                     </ul>
                     <ul className="nav navbar-nav justify-content-end">

@@ -1,11 +1,15 @@
 import React from 'react'
 import { Button, Dropdown } from 'react-bootstrap';
 import { NavLink,Link } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 import './styles.css';
 
 
-export const DropDownList = () => {
+export const DropDownList = ({categories}) => {
   return (
+
     <div className='drop-list'>    
         <Dropdown>
         <Dropdown.Toggle className='btn btn-dark dropdown-toggle' data-toggle="dropdown" >
@@ -14,9 +18,16 @@ export const DropDownList = () => {
             </span><p>Categorias</p>
         </Dropdown.Toggle>
         <Dropdown.Menu >
-            <Dropdown.Item><Link to ={`/category/${1}` } className='link'>Crypto Punks</Link></Dropdown.Item>
-            <Dropdown.Item><Link to ={`/category/${2}` }  className='link'>Bored Ape Collection</Link></Dropdown.Item>
-            <Dropdown.Item ><Link to ={`/category/${3}` }  className='link'>Cool Cats NFT</Link></Dropdown.Item>
+            {
+              categories=="" ?     <Box sx={{ display: 'flex' }}><CircularProgress /></Box> :
+              categories.map(category => {
+                return <>
+                <Dropdown.Item><Link to ={`/category/${category.key}` } className='link'>{category.name}</Link></Dropdown.Item>
+                </>
+              })
+            }
+            
+    
         </Dropdown.Menu>
         </Dropdown>
     </div>
